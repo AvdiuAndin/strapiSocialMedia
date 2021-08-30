@@ -4,6 +4,8 @@ Node version: 14.17.5
 Strapi version: 3.6.8
 Ubuntu: Focal
 
+Run the application by running `strapi dev`
+
 This strapi application is build to support these features:
 
 1. As a user I want to create a profile. 

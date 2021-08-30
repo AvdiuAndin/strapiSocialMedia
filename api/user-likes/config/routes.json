@@ -1,0 +1,21 @@
+{
+  
+  "routes": [
+        {
+            "method": "POST",
+            "path": "/user/:id/like",
+            "handler": "user-likes.likeUser",
+            "config": {
+                "policies": ["userExists"]
+            }
+        },
+        {
+            "method": "DELETE",
+            "path": "/user/:id/unlike",
+            "handler": "user-likes.unLikeUser",
+            "config": {
+                "policies": ["userExists"]
+            }
+        }
+    ]
+}

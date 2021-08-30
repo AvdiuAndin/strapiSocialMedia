@@ -1,0 +1,158 @@
+{
+    "paths": {
+      "/user/profiles": {
+        "get": {
+          "deprecated": false,
+          "description": "Gets the profiles of the users, along with an boolean value (1 or 0) on attribute `liked` which indicates if the requesting user has liked the profile",
+          "responses": {
+            "200": {
+              "description": "response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                        "type":"object",
+                        "properties": {
+                            "username":{
+                                "type":"string"
+                            },
+                            "id": {
+                                "type":"number"
+                            },
+                            "email": {
+                                "type":"number"
+                            },
+                            "liked":{
+                                "type":"number"
+                            }
+                        }
+                    }
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Forbidden",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            },
+            "default": {
+              "description": "unexpected error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            }
+          },
+          "summary": "",
+          "tags": [
+            "Users"
+          ],
+          "parameters": []
+        }
+      },
+      "/user/{id}/profile": {
+        "get": {
+          "deprecated": false,
+          "description": "",
+          "responses": {
+            "200": {
+              "description": "response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "properties": {
+                        "username":{
+                            "type":"string"
+                        },
+                        "id": {
+                            "type":"number"
+                        },
+                        "email": {
+                            "type":"number"
+                        },
+                        "numberOfLikes":{
+                            "type":"number"
+                        },
+                        "numberOfLikedUsers":{
+                            "type":"number"
+                        }
+                    }
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "Forbidden",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            },
+            "default": {
+              "description": "unexpected error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            }
+          },
+          "summary": "",
+          "tags": [
+            "Users"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "",
+              "deprecated": false,
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      },
+      "tags": [
+      {
+        "name": "Users"
+      }
+    ]
+  }

@@ -1,0 +1,21 @@
+{
+    "routes": [
+          {
+              "method": "GET",
+              "path": "/user/profiles",
+              "handler": "users.getUserProfiles",
+              "config": {
+                  "policies": []
+              }
+          },
+          {
+            "method": "GET",
+            "path": "/user/:id/profile",
+            "handler": "users.getUserProfileByUserId",
+            "config": {
+                "policies": []
+            }
+        }
+      ]
+  }
+  

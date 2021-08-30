@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_likes",
+  "info": {
+    "name": "User Likes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "follower": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

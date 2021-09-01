@@ -4,6 +4,21 @@ Node version: 14.17.5
 Strapi version: 3.6.8
 Ubuntu: Focal
 
+##UPDATE 
+Added docker compose file
+
+Once u clone the Next js repository, go to the folder and build a docker image by running this command
+
+``` docker build -t next_app . ```
+
+Then u clone Strapi app repository, go the folder of strapi app and build a docker image
+
+``` docker build -t strapi_app . ```
+
+In this folder you can run this command to run the applications
+
+``` docker-compose up ```
+
 Run the application by running `strapi dev`
 
 This strapi application is build to support these features:

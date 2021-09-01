@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  server:
+    image: strapi_app
+    volumes: 
+      - .:/code
+    ports:
+      - "1337:1337"
+  web:
+    ports:
+        - "3000:3000"
+    image: next_app
+    depends_on:
+      - server
